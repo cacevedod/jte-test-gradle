@@ -22,6 +22,9 @@ pipeline{
             }            
         }
         stage('approve'){
+            when{
+                branch 'master'
+            }
             agent none
             steps{
                 script{
@@ -32,6 +35,9 @@ pipeline{
             }
         }
         stage('deploy'){
+            when{
+                branch 'master'
+            }
             steps{
                 echo "Pendiente de implementación"
             }
