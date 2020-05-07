@@ -27,5 +27,9 @@ test {
 }
 
 jacocoTestReport {
+	reports {
+        xml.enabled true
+        csv.enabled false
+	}
     dependsOn test // tests are required to run before generating the report
 }
