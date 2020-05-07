@@ -1,0 +1,28 @@
+pipeline{
+    agent any
+    stages{
+        stage('build'){
+            steps{
+                sh 'chmod +x gradlew'
+                sh './gradlew clean build -DskipTests=true'
+                archiveArtifacts artifacts: 'build/libs/**/*.jar'
+            }            
+        }
+        stage('test'){
+            steps{
+                sh './gradlew test'
+            }
+            post {
+                always {
+                    junit 'build/test-results/**/*.xml'
+                    archiveArtifacts artifacts: 'build/reports/jacoco/**/*.xml'
+                }
+            }            
+        }
+        stage('deploy'){
+            steps{
+                echo "Pendiente de implementación"
+            }
+        }
+    }
+}
