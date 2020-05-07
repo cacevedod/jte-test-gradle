@@ -21,6 +21,16 @@ pipeline{
                 }
             }            
         }
+        stage('approve'){
+            agent none
+            steps{
+                script{
+                    timeout(time: 5, unit: 'SECONDS'){
+                        input message: 'Apruebas el despliegue', submitter: 'admin'
+                    }
+                }
+            }
+        }
         stage('deploy'){
             steps{
                 echo "Pendiente de implementación"
