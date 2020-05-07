@@ -1,4 +1,4 @@
-pipeline_template = java
+pipeline_template = 'java'
 
 ibraries{
     git
