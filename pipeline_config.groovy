@@ -1,7 +1,8 @@
 pipeline_template = 'java'
 
-ibraries{
-    git
+libraries{
+    git{
+        source_type = "github"
+    }
     gradle
-    approve
 }
