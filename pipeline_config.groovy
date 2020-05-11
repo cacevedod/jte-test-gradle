@@ -3,10 +3,10 @@ skip_default_checkout = true
 
 libraries{
     gradle
-    approve{
+    approve {
         branch_conditional = "master"
     }
-    hola_mundo{
+    hola_mundo {
         branch_conditional = "master"
     }
 }
