@@ -6,4 +6,7 @@ libraries{
     approve{
         branch_conditional = "master"
     }
+    hola_mundo{
+        branch_conditional = "master"
+    }
 }
