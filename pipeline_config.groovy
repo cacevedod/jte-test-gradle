@@ -3,4 +3,5 @@ skip_default_checkout = true
 
 libraries{
     gradle
+    approve
 }
