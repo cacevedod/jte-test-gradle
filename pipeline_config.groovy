@@ -3,5 +3,7 @@ skip_default_checkout = true
 
 libraries{
     gradle
-    approve
+    approve{
+        branch_conditional = master
+    }
 }
